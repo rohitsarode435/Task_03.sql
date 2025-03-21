@@ -111,9 +111,6 @@ GROUP BY c.course_id, c.course_name
 HAVING COUNT(e.student_id) > 5;
 
 --18. Get students and their most recent enrollment date
-select * from students
-select * from enrollments
-select * from courses
 SELECT s.student_id, s.name, MAX(e.enrolled_on) AS most_recent_enrollment
 FROM Students s
 JOIN Enrollments e ON s.student_id = e.student_id
